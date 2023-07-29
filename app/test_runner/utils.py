@@ -24,6 +24,11 @@ def wait_for_element(driver: 'WebDriver', locator: str, value: str, timeout_sec:
 
 
 def replace_date_format(input_text):
+    """
+    Replace date format
+    :param input_text:
+    :return: date format - 03.10.2023-04.10.2023
+    """
     def add_leading_zero(number):
         return f'{int(number):02d}'
 
