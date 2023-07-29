@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+pytest
+appium-python-client
+redis
