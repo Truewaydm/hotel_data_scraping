@@ -1,3 +1,4 @@
+import os
 import re
 
 from selenium.webdriver.support import expected_conditions
@@ -29,6 +30,7 @@ def replace_date_format(input_text):
     :param input_text:
     :return: date format - 03.10.2023-04.10.2023
     """
+
     def add_leading_zero(number):
         return f'{int(number):02d}'
 
@@ -42,3 +44,15 @@ def replace_date_format(input_text):
                     input_text)
     result = result.replace(' → ', '-')
     return result
+
+
+def get_file_path(path: str, name_of_file: str):
+    """
+    Get the path to the JSON file
+    :param path: Subdirectory within the 'app' directory where the file is located
+    :param name_of_file: Name of the JSON file
+    :return: Full path to the JSON file
+    """
+    current_directory = os.path.dirname(os.path.abspath(__file__))
+    app_directory = os.path.dirname(current_directory)
+    return os.path.join(app_directory, path, name_of_file)
