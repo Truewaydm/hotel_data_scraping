@@ -4,6 +4,7 @@ import pytest
 
 from app.test_runner.get_prices import find_hotel_prices
 from app.test_runner.test_base import init_driver, close_driver
+from app.test_runner.utils import get_file_path
 
 
 @pytest.mark.parametrize(
@@ -24,5 +25,6 @@ def test_tripadvisor_prices(hotel_name, dates):
     close_driver(driver)
 
     json_data = {hotel_name: prices}
-    with open("json_data/prices.json", "w") as file:
+    with open(get_file_path("json_data", "prices.json"), "w") as file:
         json.dump(json_data, file)
+    return json_data

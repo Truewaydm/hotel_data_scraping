@@ -19,15 +19,17 @@ def find_hotel_prices(driver, hotel_name, dates):
     :param driver: WebDriver
     :param hotel_name: The Grosvenor Hotel
     :param dates:
-                {"check_in_date": "date number"}
+                {"date": "date number"}
                 ...
-    :return:
+    :return: prices
     {
-    '03.10.2023-04.10.2023':
-        [
-            {'Booking.com': '$86', 'screenshot': '03.10.2023-04.10.2023.png'}
-            ...
-        ]
+  "The Grosvenor Hotel": {
+    "03.10.2023-04.10.2023": [
+      {
+        "Booking.com": "$86",
+        "screenshot": "03.10.2023-04.10.2023.png"
+      },
+      ...
     }
     """
     driver.find_element(by=AppiumBy.ID, value=BUTTON_HOTELS).click()
@@ -43,13 +45,13 @@ def find_hotel_prices(driver, hotel_name, dates):
         if date["date"] == "3":
             wait_for_element(driver, AppiumBy.ID, value=BUTTON_VIEW_ALL_DEALS, timeout_sec=10).click()
 
-        driver.implicitly_wait(10)
+        driver.implicitly_wait(30)
         date_picker = driver.find_element(by=AppiumBy.ID, value=DATE_PICKER).text
         date_format = replace_date_format(date_picker)
         date['date'] = date_format
 
         provider_names = []
-        driver.implicitly_wait(10)
+        driver.implicitly_wait(30)
         booking_provider = (driver.find_element
                             (by=AppiumBy.ACCESSIBILITY_ID, value=FIRST_TOP_DEAL).get_attribute("content-desc"))
         provider_names.append(booking_provider)
@@ -62,6 +64,7 @@ def find_hotel_prices(driver, hotel_name, dates):
         for price in price_deal:
             prices_names.append(price.text)
 
+        driver.implicitly_wait(30)
         screenshot_name = f"{date_format}.png"
         driver.save_screenshot(f"tests_screenshots/{screenshot_name}")
 
