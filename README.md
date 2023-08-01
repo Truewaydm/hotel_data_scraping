@@ -94,7 +94,6 @@ For example:
 ```
 Request:
 curl --location 'http://localhost:3000/api/send' \
---header 'x-api-key-token: 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' \
 --header 'Content-Type: application/json' \
 --data '{
     "hotel_name": "The Grosvenor Hotel",
