@@ -3,3 +3,4 @@ uvicorn
 pytest
 appium-python-client
 redis
+rq
