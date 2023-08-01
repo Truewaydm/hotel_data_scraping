@@ -1,15 +1,25 @@
-from fastapi import APIRouter, HTTPException
+import json
+import time
 
+from fastapi import APIRouter, HTTPException
 from app.api.models.hotels import HotelModel
 from app.test_runner.test_tripadvisor import test_tripadvisor_prices
+from rq import Queue
+from redis import Redis
+
+from app.test_runner.utils import get_file_path
 
 app_tripadvisor = APIRouter()
+
+redis_conn = Redis(host='localhost', port=6379)
+
+queue = Queue(connection=redis_conn)
 
 
 @app_tripadvisor.post("/send",
                       tags=["Prices"],
                       description="Send data for test {hotel_name: date_list}")
-def send_date_list(hotel_data: HotelModel):
+async def send_date_list(hotel_data: HotelModel):
     """
     Endpoint for sending a date_list and receiving a response.
     :param hotel_data: HotelModel
@@ -53,8 +63,16 @@ def send_date_list(hotel_data: HotelModel):
             if not isinstance(date_value, str) or not date_value.strip():
                 raise HTTPException(status_code=400, detail="Bad Request: Invalid dates format")
 
-        prices = test_tripadvisor_prices(hotel_name, dates)
-        return prices
+        job = queue.enqueue(test_tripadvisor_prices, hotel_name, dates)
+        while not job.is_finished:
+            time.sleep(5)
+        job_result = job.return_value
+        if isinstance(job_result, Exception):
+            raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(job_result)}")
+
+        with open(get_file_path("json_data", "prices.json"), "r") as file:
+            json_data = json.load(file)
+        return json_data
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")

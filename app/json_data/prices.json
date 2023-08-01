@@ -1,1 +1,114 @@
-{"The Grosvenor Hotel": {"03.10.2023-04.10.2023": [{"Booking.com": "$86", "screenshot": "03.10.2023-04.10.2023.png"}, {"Priceline": "$86", "screenshot": "03.10.2023-04.10.2023.png"}, {"eDreams": "$86", "screenshot": "03.10.2023-04.10.2023.png"}, {"Agoda.com": "$86", "screenshot": "03.10.2023-04.10.2023.png"}, {"Vio.com": "$86", "screenshot": "03.10.2023-04.10.2023.png"}], "08.10.2023-09.10.2023": [{"Booking.com": "$80", "screenshot": "08.10.2023-09.10.2023.png"}, {"Priceline": "$80", "screenshot": "08.10.2023-09.10.2023.png"}, {"eDreams": "$80", "screenshot": "08.10.2023-09.10.2023.png"}, {"Agoda.com": "$80", "screenshot": "08.10.2023-09.10.2023.png"}], "11.10.2023-12.10.2023": [{"Booking.com": "$80", "screenshot": "11.10.2023-12.10.2023.png"}, {"Priceline": "$80", "screenshot": "11.10.2023-12.10.2023.png"}, {"eDreams": "$80", "screenshot": "11.10.2023-12.10.2023.png"}, {"Agoda.com": "$80", "screenshot": "11.10.2023-12.10.2023.png"}, {"Vio.com": "$80", "screenshot": "11.10.2023-12.10.2023.png"}], "16.10.2023-17.10.2023": [{"Booking.com": "$80", "screenshot": "16.10.2023-17.10.2023.png"}, {"Priceline": "$80", "screenshot": "16.10.2023-17.10.2023.png"}, {"eDreams": "$80", "screenshot": "16.10.2023-17.10.2023.png"}, {"Agoda.com": "$80", "screenshot": "16.10.2023-17.10.2023.png"}, {"Vio.com": "$80", "screenshot": "16.10.2023-17.10.2023.png"}], "23.10.2023-24.10.2023": [{"Booking.com": "$86", "screenshot": "23.10.2023-24.10.2023.png"}, {"Priceline": "$86", "screenshot": "23.10.2023-24.10.2023.png"}, {"eDreams": "$86", "screenshot": "23.10.2023-24.10.2023.png"}, {"Agoda.com": "$86", "screenshot": "23.10.2023-24.10.2023.png"}, {"Vio.com": "$86", "screenshot": "23.10.2023-24.10.2023.png"}]}}
+{
+  "The Grosvenor Hotel": {
+    "03.10.2023-04.10.2023": [
+      {
+        "Booking.com": "$86",
+        "screenshot": "03.10.2023-04.10.2023.png"
+      },
+      {
+        "eDreams": "$86",
+        "screenshot": "03.10.2023-04.10.2023.png"
+      },
+      {
+        "Priceline": "$86",
+        "screenshot": "03.10.2023-04.10.2023.png"
+      },
+      {
+        "Agoda.com": "$86",
+        "screenshot": "03.10.2023-04.10.2023.png"
+      },
+      {
+        "Vio.com": "$86",
+        "screenshot": "03.10.2023-04.10.2023.png"
+      }
+    ],
+    "08.10.2023-09.10.2023": [
+      {
+        "Booking.com": "$80",
+        "screenshot": "08.10.2023-09.10.2023.png"
+      },
+      {
+        "Priceline": "$80",
+        "screenshot": "08.10.2023-09.10.2023.png"
+      },
+      {
+        "eDreams": "$80",
+        "screenshot": "08.10.2023-09.10.2023.png"
+      },
+      {
+        "Agoda.com": "$80",
+        "screenshot": "08.10.2023-09.10.2023.png"
+      },
+      {
+        "Vio.com": "$80",
+        "screenshot": "08.10.2023-09.10.2023.png"
+      }
+    ],
+    "11.10.2023-12.10.2023": [
+      {
+        "Booking.com": "$80",
+        "screenshot": "11.10.2023-12.10.2023.png"
+      },
+      {
+        "Priceline": "$80",
+        "screenshot": "11.10.2023-12.10.2023.png"
+      },
+      {
+        "eDreams": "$80",
+        "screenshot": "11.10.2023-12.10.2023.png"
+      },
+      {
+        "Agoda.com": "$80",
+        "screenshot": "11.10.2023-12.10.2023.png"
+      },
+      {
+        "Vio.com": "$80",
+        "screenshot": "11.10.2023-12.10.2023.png"
+      }
+    ],
+    "16.10.2023-17.10.2023": [
+      {
+        "Booking.com": "$80",
+        "screenshot": "16.10.2023-17.10.2023.png"
+      },
+      {
+        "Priceline": "$80",
+        "screenshot": "16.10.2023-17.10.2023.png"
+      },
+      {
+        "eDreams": "$80",
+        "screenshot": "16.10.2023-17.10.2023.png"
+      },
+      {
+        "Agoda.com": "$80",
+        "screenshot": "16.10.2023-17.10.2023.png"
+      },
+      {
+        "Vio.com": "$80",
+        "screenshot": "16.10.2023-17.10.2023.png"
+      }
+    ],
+    "23.10.2023-24.10.2023": [
+      {
+        "Booking.com": "$86",
+        "screenshot": "23.10.2023-24.10.2023.png"
+      },
+      {
+        "Priceline": "$86",
+        "screenshot": "23.10.2023-24.10.2023.png"
+      },
+      {
+        "eDreams": "$86",
+        "screenshot": "23.10.2023-24.10.2023.png"
+      },
+      {
+        "Agoda.com": "$86",
+        "screenshot": "23.10.2023-24.10.2023.png"
+      },
+      {
+        "Vio.com": "$86",
+        "screenshot": "23.10.2023-24.10.2023.png"
+      }
+    ]
+  }
+}
